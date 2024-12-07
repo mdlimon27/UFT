@@ -12,7 +12,7 @@ ConvertExtensionFromXLStoXLSX vSource,vDestination
 'Created Date: 12.07.2024
 'Inputs: Path of the Excel file with .xls extension, path of the excel file with .xlsx extension
 'Outputs: None
-'Language/Tools: Visual Basic Scripting, Unified Functional Testing
+'Language/Tools: Visual Basic Scripting, Unified Functional Testing, Microsoft Excel
 
 Function ConvertExtensionFromXLStoXLSX(vSource,vDestination)
 	Set myExcel=CreateObject("Excel.Application")
