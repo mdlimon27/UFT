@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:s0="HP.SOAQ.SampleApp/Imports" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="HP.SOAQ.SampleApp" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" name="HPFlights_Service" targetNamespace="HP.SOAQ.SampleApp" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema targetNamespace="HP.SOAQ.SampleApp/Imports">
+      <s:import schemaLocation="http://localhost:24240/HPFlights_SOAP?xsd=xsd0" namespace="HP.SOAQ.SampleApp" />
+      <s:import schemaLocation="http://localhost:24240/HPFlights_SOAP?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="IHPFlights_Service_CreateFlightOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateFlightOrder" />
+  </wsdl:message>
+  <wsdl:message name="IHPFlights_Service_CreateFlightOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateFlightOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHPFlights_Service_CreateFlightOrder_MyFaultExceptionFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:MyFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IHPFlights_Service_GetFlights_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFlights" />
+  </wsdl:message>
+  <wsdl:message name="IHPFlights_Service_GetFlights_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFlightsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHPFlights_Service_GetFlights_MyFaultExceptionFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:MyFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IHPFlights_Service_GetFlightOrders_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFlightOrders" />
+  </wsdl:message>
+  <wsdl:message name="IHPFlights_Service_GetFlightOrders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFlightOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHPFlights_Service_GetFlightOrders_MyFaultExceptionFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:MyFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IHPFlights_Service_UpdateFlightOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateFlightOrder" />
+  </wsdl:message>
+  <wsdl:message name="IHPFlights_Service_UpdateFlightOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateFlightOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHPFlights_Service_UpdateFlightOrder_MyFaultExceptionFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:MyFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IHPFlights_Service_DeleteFlightOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFlightOrder" />
+  </wsdl:message>
+  <wsdl:message name="IHPFlights_Service_DeleteFlightOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFlightOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHPFlights_Service_DeleteFlightOrder_MyFaultExceptionFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:MyFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IHPFlights_Service_DeleteAllFlightOrders_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAllFlightOrders" />
+  </wsdl:message>
+  <wsdl:message name="IHPFlights_Service_DeleteAllFlightOrders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAllFlightOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHPFlights_Service_DeleteAllFlightOrders_MyFaultExceptionFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:MyFaultException" />
+  </wsdl:message>
+  <wsdl:portType name="IHPFlights_Service">
+    <wsdl:operation name="CreateFlightOrder">
+      <wsdl:input wsaw:Action="HP.SOAQ.SampleApp/IHPFlights_Service/CreateFlightOrder" message="tns:IHPFlights_Service_CreateFlightOrder_InputMessage" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" />
+      <wsdl:output wsaw:Action="HP.SOAQ.SampleApp/IHPFlights_Service/CreateFlightOrderResponse" message="tns:IHPFlights_Service_CreateFlightOrder_OutputMessage" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" />
+      <wsdl:fault wsaw:Action="HP.SOAQ.SampleApp/IHPFlights_Service/CreateFlightOrderMyFaultExceptionFault" name="MyFaultExceptionFault" message="tns:IHPFlights_Service_CreateFlightOrder_MyFaultExceptionFault_FaultMessage" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFlights">
+      <wsdl:input wsaw:Action="HP.SOAQ.SampleApp/IHPFlights_Service/GetFlights" message="tns:IHPFlights_Service_GetFlights_InputMessage" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" />
+      <wsdl:output wsaw:Action="HP.SOAQ.SampleApp/IHPFlights_Service/GetFlightsResponse" message="tns:IHPFlights_Service_GetFlights_OutputMessage" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" />
+      <wsdl:fault wsaw:Action="HP.SOAQ.SampleApp/IHPFlights_Service/GetFlightsMyFaultExceptionFault" name="MyFaultExceptionFault" message="tns:IHPFlights_Service_GetFlights_MyFaultExceptionFault_FaultMessage" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFlightOrders">
+      <wsdl:input wsaw:Action="HP.SOAQ.SampleApp/IHPFlights_Service/GetFlightOrders" message="tns:IHPFlights_Service_GetFlightOrders_InputMessage" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" />
+      <wsdl:output wsaw:Action="HP.SOAQ.SampleApp/IHPFlights_Service/GetFlightOrdersResponse" message="tns:IHPFlights_Service_GetFlightOrders_OutputMessage" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" />
+      <wsdl:fault wsaw:Action="HP.SOAQ.SampleApp/IHPFlights_Service/GetFlightOrdersMyFaultExceptionFault" name="MyFaultExceptionFault" message="tns:IHPFlights_Service_GetFlightOrders_MyFaultExceptionFault_FaultMessage" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFlightOrder">
+      <wsdl:input wsaw:Action="HP.SOAQ.SampleApp/IHPFlights_Service/UpdateFlightOrder" message="tns:IHPFlights_Service_UpdateFlightOrder_InputMessage" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" />
+      <wsdl:output wsaw:Action="HP.SOAQ.SampleApp/IHPFlights_Service/UpdateFlightOrderResponse" message="tns:IHPFlights_Service_UpdateFlightOrder_OutputMessage" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" />
+      <wsdl:fault wsaw:Action="HP.SOAQ.SampleApp/IHPFlights_Service/UpdateFlightOrderMyFaultExceptionFault" name="MyFaultExceptionFault" message="tns:IHPFlights_Service_UpdateFlightOrder_MyFaultExceptionFault_FaultMessage" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFlightOrder">
+      <wsdl:input wsaw:Action="HP.SOAQ.SampleApp/IHPFlights_Service/DeleteFlightOrder" message="tns:IHPFlights_Service_DeleteFlightOrder_InputMessage" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" />
+      <wsdl:output wsaw:Action="HP.SOAQ.SampleApp/IHPFlights_Service/DeleteFlightOrderResponse" message="tns:IHPFlights_Service_DeleteFlightOrder_OutputMessage" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" />
+      <wsdl:fault wsaw:Action="HP.SOAQ.SampleApp/IHPFlights_Service/DeleteFlightOrderMyFaultExceptionFault" name="MyFaultExceptionFault" message="tns:IHPFlights_Service_DeleteFlightOrder_MyFaultExceptionFault_FaultMessage" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAllFlightOrders">
+      <wsdl:input wsaw:Action="HP.SOAQ.SampleApp/IHPFlights_Service/DeleteAllFlightOrders" message="tns:IHPFlights_Service_DeleteAllFlightOrders_InputMessage" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" />
+      <wsdl:output wsaw:Action="HP.SOAQ.SampleApp/IHPFlights_Service/DeleteAllFlightOrdersResponse" message="tns:IHPFlights_Service_DeleteAllFlightOrders_OutputMessage" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" />
+      <wsdl:fault wsaw:Action="HP.SOAQ.SampleApp/IHPFlights_Service/DeleteAllFlightOrdersMyFaultExceptionFault" name="MyFaultExceptionFault" message="tns:IHPFlights_Service_DeleteAllFlightOrders_MyFaultExceptionFault_FaultMessage" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="FlightsServiceMethods" type="tns:IHPFlights_Service">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateFlightOrder">
+      <soap:operation soapAction="HP.SOAQ.SampleApp/IHPFlights_Service/CreateFlightOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MyFaultExceptionFault">
+        <soap:fault use="literal" name="MyFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFlights">
+      <soap:operation soapAction="HP.SOAQ.SampleApp/IHPFlights_Service/GetFlights" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MyFaultExceptionFault">
+        <soap:fault use="literal" name="MyFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFlightOrders">
+      <soap:operation soapAction="HP.SOAQ.SampleApp/IHPFlights_Service/GetFlightOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MyFaultExceptionFault">
+        <soap:fault use="literal" name="MyFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFlightOrder">
+      <soap:operation soapAction="HP.SOAQ.SampleApp/IHPFlights_Service/UpdateFlightOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MyFaultExceptionFault">
+        <soap:fault use="literal" name="MyFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFlightOrder">
+      <soap:operation soapAction="HP.SOAQ.SampleApp/IHPFlights_Service/DeleteFlightOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MyFaultExceptionFault">
+        <soap:fault use="literal" name="MyFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAllFlightOrders">
+      <soap:operation soapAction="HP.SOAQ.SampleApp/IHPFlights_Service/DeleteAllFlightOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MyFaultExceptionFault">
+        <soap:fault use="literal" name="MyFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="HPFlights_Service">
+    <wsdl:port name="FlightsServiceMethods" binding="tns:FlightsServiceMethods">
+      <soap:address location="http://localhost:24240/HPFlights_SOAP" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

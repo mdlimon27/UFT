@@ -1,0 +1,37 @@
+<?xml-stylesheet href="..//StServiceCallActivity.xsl" type="text/xsl"?><report><VTD_Type name="Type">HP.ST.Ext.WebServicesActivities.StServiceCallActivity</VTD_Type><VTD_Name name="Step ID">StServiceCallActivity8</VTD_Name><InputXml name="InputXml" xml="True" link="True" FileLocation="StServiceCallActivity8_InputXml_5b93eb21-2550-442c-815e-71a7c761417f.xml">&lt;Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/" xmlns:p1="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;Body&gt;
+    &lt;CreateFlightOrder xmlns="HP.SOAQ.SampleApp"&gt;
+      &lt;FlightOrder&gt;
+        &lt;Class&gt;First&lt;/Class&gt;
+        &lt;CustomerName p1:nil="true"&gt;MD S IMRAN&lt;/CustomerName&gt;
+        &lt;DepartureDate&gt;2024-12-18T00:00:00&lt;/DepartureDate&gt;
+        &lt;FlightNumber&gt;20279&lt;/FlightNumber&gt;
+        &lt;NumberOfTickets&gt;3&lt;/NumberOfTickets&gt;
+      &lt;/FlightOrder&gt;
+    &lt;/CreateFlightOrder&gt;
+  &lt;/Body&gt;
+&lt;/Envelope&gt;</InputXml><Service name="Service">HPFlights_Service</Service><Port name="Port">FlightsServiceMethods</Port><Operation name="Operation">CreateFlightOrder</Operation><Address name="Address">http://localhost:24240/HPFlights_SOAP</Address><SOAPAction name="SOAPAction">HP.SOAQ.SampleApp/IHPFlights_Service/CreateFlightOrder</SOAPAction><ContentType name="ContentType">text/xml; charset=utf-8</ContentType><MessageExchangePattern name="MessageExchangePattern">Request Response</MessageExchangePattern><Full_request name="Full request" TooLong="True" link="True" FileLocation="StServiceCallActivity8_Full_request_84edc050-815c-44e3-ad16-53a0bbb10cba.xml">&lt;Envelope xmlns="htt ... &lt;/Body&gt;
+&lt;/Envelope&gt;</Full_request><InputHeader name="InputHeader">SOAPAction:	HP.SOAQ.SampleApp/IHPFlights_Service/CreateFlightOrder
+Content-Type:	text/xml; charset=utf-8
+Host:	localhost:24240
+Content-Length:	422
+Expect:	100-continue
+Connection:	Close
+</InputHeader><OutputHeader name="OutputHeader">Connection:	close
+Content-Length:	497
+Content-Type:	text/xml; charset=utf-8
+Date:	Thu, 19 Dec 2024 23:17:32 GMT
+Server:	Microsoft-HTTPAPI/1.0
+</OutputHeader><OutputText name="OutputText">&lt;s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"&gt;&lt;s:Body&gt;&lt;s:Fault&gt;&lt;faultcode&gt;s:Client&lt;/faultcode&gt;&lt;faultstring xml:lang="en-US"&gt;ERROR: A flight date must be specified. It should be at least 24 hours from now.&lt;/faultstring&gt;&lt;detail&gt;&lt;MyFaultException xmlns="HP.SOAQ.SampleApp" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;Reason&gt;ERROR: A flight date must be specified. It should be at least 24 hours from now.&lt;/Reason&gt;&lt;/MyFaultException&gt;&lt;/detail&gt;&lt;/s:Fault&gt;&lt;/s:Body&gt;&lt;/s:Envelope&gt;</OutputText><OutputXml name="OutputXml" xml="True" link="True" FileLocation="StServiceCallActivity8_OutputXml_74872e68-4355-4c96-8aa0-8fff8e8fca55.xml">&lt;s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+  &lt;s:Body&gt;
+    &lt;s:Fault&gt;
+      &lt;faultcode&gt;s:Client&lt;/faultcode&gt;
+      &lt;faultstring xml:lang="en-US"&gt;ERROR: A flight date must be specified. It should be at least 24 hours from now.&lt;/faultstring&gt;
+      &lt;detail&gt;
+        &lt;MyFaultException xmlns="HP.SOAQ.SampleApp" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"&gt;
+          &lt;Reason&gt;ERROR: A flight date must be specified. It should be at least 24 hours from now.&lt;/Reason&gt;
+        &lt;/MyFaultException&gt;
+      &lt;/detail&gt;
+    &lt;/s:Fault&gt;
+  &lt;/s:Body&gt;
+&lt;/s:Envelope&gt;</OutputXml><HttpStatusCode name="HttpStatusCode">500 : InternalServerError</HttpStatusCode><VTD_Message name="Message">Web service call performed successfully</VTD_Message><Name name="Name">'CreateFlightOrder'</Name><Comment name="Comment">''</Comment><VTD_Status name="Status">Done</VTD_Status></report>

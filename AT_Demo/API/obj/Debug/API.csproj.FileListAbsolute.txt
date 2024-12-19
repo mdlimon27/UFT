@@ -1,0 +1,5 @@
+C:\AT_Demo\API\bin\Script.dll
+C:\AT_Demo\API\bin\Script.pdb
+C:\AT_Demo\API\obj\Debug\ResolveAssemblyReference.cache
+C:\AT_Demo\API\obj\Debug\Script.dll
+C:\AT_Demo\API\obj\Debug\Script.pdb

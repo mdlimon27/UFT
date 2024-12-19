@@ -1,0 +1,316 @@
+2024-12-19 18:27:57,959 [5] INFO  UserLogger [(null)] - Step 'Start' : Step 'Start' started
+2024-12-19 18:27:57,974 [5] DEBUG UserLogger [(null)] - Step 'Start' : Parent Step: 'test'
+2024-12-19 18:27:57,990 [5] INFO  UserLogger [(null)] - Step 'Start' ended successfully
+2024-12-19 18:27:57,990 [5] INFO  UserLogger [(null)] - Step 'Test Flow' : Step 'Test Flow' started
+2024-12-19 18:27:58,006 [5] DEBUG UserLogger [(null)] - Step 'Test Flow' : Parent Step: 'test'
+2024-12-19 18:27:58,834 [5] INFO  UserLogger [(null)] - Step 'Iteration 1' : Step 'Iteration 1' started
+2024-12-19 18:27:58,849 [5] DEBUG UserLogger [(null)] - Step 'Iteration 1' : Parent Step: 'Loop2'
+2024-12-19 18:27:58,849 [5] INFO  UserLogger [(null)] - Step 'Condition5' : Step 'Condition5' started
+2024-12-19 18:27:58,849 [5] DEBUG UserLogger [(null)] - Step 'Condition5' : Parent Step: 'Sequence13'
+2024-12-19 18:27:58,865 [5] INFO  UserLogger [(null)] - Step 'IfElse5' : Evaluation style : Using condition
+2024-12-19 18:27:58,865 [5] INFO  UserLogger [(null)] - Step 'Yes' : Step 'Yes' started
+2024-12-19 18:27:58,865 [5] DEBUG UserLogger [(null)] - Step 'Yes' : Parent Step: 'IfElse5'
+2024-12-19 18:27:58,881 [5] INFO  UserLogger [(null)] - Step 'CreateFlightOrder' : Step 'CreateFlightOrder' started
+2024-12-19 18:27:58,881 [5] DEBUG UserLogger [(null)] - Step 'CreateFlightOrder' : Parent Step: 'IfElseBranch6'
+2024-12-19 18:27:58,927 [5] INFO  UserLogger [(null)] - 
+Request:
+
+<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/" xmlns:p1="http://www.w3.org/2001/XMLSchema-instance">
+  <Body>
+    <CreateFlightOrder xmlns="HP.SOAQ.SampleApp">
+      <FlightOrder>
+        <Class>First</Class>
+        <CustomerName>MD S IMRAN</CustomerName>
+        <DepartureDate>2024-12-21T00:00:00</DepartureDate>
+        <FlightNumber>20279</FlightNumber>
+        <NumberOfTickets>3</NumberOfTickets>
+      </FlightOrder>
+    </CreateFlightOrder>
+  </Body>
+</Envelope>
+
+2024-12-19 18:27:58,959 [5] INFO  UserLogger [(null)] - Encoding channel is processing the message
+2024-12-19 18:27:58,974 [5] INFO  UserLogger [(null)] - Sending the following message:
+2024-12-19 18:27:58,974 [5] INFO  UserLogger [(null)] - HTTP channel is processing the message
+2024-12-19 18:27:58,990 [5] INFO  UserLogger [(null)] - URL: http://localhost:24240/HPFlights_SOAP
+2024-12-19 18:27:59,006 [5] INFO  UserLogger [(null)] - Sending the request to the server
+2024-12-19 18:27:59,021 [5] INFO  UserLogger [(null)] - 
+
+Request after processing:
+
+<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/" xmlns:p1="http://www.w3.org/2001/XMLSchema-instance">
+  <Body>
+    <CreateFlightOrder xmlns="HP.SOAQ.SampleApp">
+      <FlightOrder>
+        <Class>First</Class>
+        <CustomerName>MD S IMRAN</CustomerName>
+        <DepartureDate>2024-12-21T00:00:00</DepartureDate>
+        <FlightNumber>20279</FlightNumber>
+        <NumberOfTickets>3</NumberOfTickets>
+      </FlightOrder>
+    </CreateFlightOrder>
+  </Body>
+</Envelope>
+
+
+2024-12-19 18:27:59,349 [5] INFO  UserLogger [(null)] - Returning the response to the previous channel
+2024-12-19 18:27:59,349 [5] INFO  UserLogger [(null)] - HTTP channel - done
+2024-12-19 18:27:59,365 [5] INFO  UserLogger [(null)] - Received the following message:
+2024-12-19 18:27:59,365 [5] INFO  UserLogger [(null)] - Encoding channel - done
+2024-12-19 18:27:59,396 [5] INFO  UserLogger [(null)] - 
+Response:
+
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Body>
+    <CreateFlightOrderResponse xmlns="HP.SOAQ.SampleApp">
+      <CreateFlightOrderResult xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+        <OrderNumber>33</OrderNumber>
+        <TotalPrice>336</TotalPrice>
+      </CreateFlightOrderResult>
+    </CreateFlightOrderResponse>
+  </s:Body>
+</s:Envelope>
+
+2024-12-19 18:27:59,427 [5] INFO  UserLogger [(null)] - Structural Validation: True
+2024-12-19 18:27:59,427 [5] INFO  UserLogger [(null)] - Step 'CreateFlightOrder' ended successfully
+2024-12-19 18:27:59,443 [5] INFO  UserLogger [(null)] - Step 'Yes' ended successfully
+2024-12-19 18:27:59,443 [5] INFO  UserLogger [(null)] - Step 'Condition5' ended successfully
+2024-12-19 18:27:59,443 [5] INFO  UserLogger [(null)] - Step 'Iteration 1' ended successfully
+2024-12-19 18:27:59,459 [5] INFO  UserLogger [(null)] - Step 'Iteration 2' : Step 'Iteration 2' started
+2024-12-19 18:27:59,459 [5] DEBUG UserLogger [(null)] - Step 'Iteration 2' : Parent Step: 'Loop2'
+2024-12-19 18:27:59,459 [5] INFO  UserLogger [(null)] - Step 'Condition5' : Step 'Condition5' started
+2024-12-19 18:27:59,474 [5] DEBUG UserLogger [(null)] - Step 'Condition5' : Parent Step: 'Sequence13'
+2024-12-19 18:27:59,474 [5] INFO  UserLogger [(null)] - Step 'IfElse5' : Evaluation style : Using condition
+2024-12-19 18:27:59,474 [5] INFO  UserLogger [(null)] - Step 'No' : Step 'No' started
+2024-12-19 18:27:59,490 [5] DEBUG UserLogger [(null)] - Step 'No' : Parent Step: 'IfElse5'
+2024-12-19 18:27:59,490 [5] INFO  UserLogger [(null)] - Step 'CreateFlightOrder' : Step 'CreateFlightOrder' started
+2024-12-19 18:27:59,490 [5] DEBUG UserLogger [(null)] - Step 'CreateFlightOrder' : Parent Step: 'IfElseBranch7'
+2024-12-19 18:27:59,506 [5] INFO  UserLogger [(null)] - 
+Request:
+
+<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/" xmlns:p1="http://www.w3.org/2001/XMLSchema-instance">
+  <Body>
+    <CreateFlightOrder xmlns="HP.SOAQ.SampleApp">
+      <FlightOrder>
+        <Class>First</Class>
+        <CustomerName p1:nil="true">MD S IMRAN</CustomerName>
+        <DepartureDate>2024-12-19T00:00:00</DepartureDate>
+        <FlightNumber>20279</FlightNumber>
+        <NumberOfTickets>3</NumberOfTickets>
+      </FlightOrder>
+    </CreateFlightOrder>
+  </Body>
+</Envelope>
+
+2024-12-19 18:27:59,506 [5] INFO  UserLogger [(null)] - Encoding channel is processing the message
+2024-12-19 18:27:59,506 [5] INFO  UserLogger [(null)] - Sending the following message:
+2024-12-19 18:27:59,521 [5] INFO  UserLogger [(null)] - HTTP channel is processing the message
+2024-12-19 18:27:59,521 [5] INFO  UserLogger [(null)] - URL: http://localhost:24240/HPFlights_SOAP
+2024-12-19 18:27:59,521 [5] INFO  UserLogger [(null)] - Sending the request to the server
+2024-12-19 18:27:59,537 [5] INFO  UserLogger [(null)] - 
+
+Request after processing:
+
+<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/" xmlns:p1="http://www.w3.org/2001/XMLSchema-instance">
+  <Body>
+    <CreateFlightOrder xmlns="HP.SOAQ.SampleApp">
+      <FlightOrder>
+        <Class>First</Class>
+        <CustomerName p1:nil="true">MD S IMRAN</CustomerName>
+        <DepartureDate>2024-12-19T00:00:00</DepartureDate>
+        <FlightNumber>20279</FlightNumber>
+        <NumberOfTickets>3</NumberOfTickets>
+      </FlightOrder>
+    </CreateFlightOrder>
+  </Body>
+</Envelope>
+
+
+2024-12-19 18:27:59,552 [5] INFO  UserLogger [(null)] - Returning the response to the previous channel
+2024-12-19 18:27:59,552 [5] INFO  UserLogger [(null)] - HTTP channel - done
+2024-12-19 18:27:59,568 [5] INFO  UserLogger [(null)] - Received the following message:
+2024-12-19 18:27:59,568 [5] INFO  UserLogger [(null)] - Encoding channel - done
+2024-12-19 18:27:59,568 [5] INFO  UserLogger [(null)] - 
+Response:
+
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Body>
+    <s:Fault>
+      <faultcode>s:Client</faultcode>
+      <faultstring xml:lang="en-US">ERROR: A flight date must be specified. It should be at least 24 hours from now.</faultstring>
+      <detail>
+        <MyFaultException xmlns="HP.SOAQ.SampleApp" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+          <Reason>ERROR: A flight date must be specified. It should be at least 24 hours from now.</Reason>
+        </MyFaultException>
+      </detail>
+    </s:Fault>
+  </s:Body>
+</s:Envelope>
+
+2024-12-19 18:27:59,584 [5] INFO  UserLogger [(null)] - Checkpoint 1: "s:Client" = "s:Client" passed
+2024-12-19 18:27:59,584 [5] INFO  UserLogger [(null)] - Checkpoint 2: "ERROR: A flight date must be specified. It should be at least 24 hours from now." = "ERROR: A flight date must be specified. It should be at least 24 hours from now." passed
+2024-12-19 18:27:59,599 [5] INFO  UserLogger [(null)] - Structural Validation: True
+2024-12-19 18:27:59,599 [5] INFO  UserLogger [(null)] - Step 'CreateFlightOrder' ended successfully
+2024-12-19 18:27:59,599 [5] INFO  UserLogger [(null)] - Step 'No' ended successfully
+2024-12-19 18:27:59,615 [5] INFO  UserLogger [(null)] - Step 'Condition5' ended successfully
+2024-12-19 18:27:59,615 [5] INFO  UserLogger [(null)] - Step 'Iteration 2' ended successfully
+2024-12-19 18:27:59,646 [5] INFO  UserLogger [(null)] - Step 'Iteration 3' : Step 'Iteration 3' started
+2024-12-19 18:27:59,646 [5] DEBUG UserLogger [(null)] - Step 'Iteration 3' : Parent Step: 'Loop2'
+2024-12-19 18:27:59,662 [5] INFO  UserLogger [(null)] - Step 'Condition5' : Step 'Condition5' started
+2024-12-19 18:27:59,662 [5] DEBUG UserLogger [(null)] - Step 'Condition5' : Parent Step: 'Sequence13'
+2024-12-19 18:27:59,662 [5] INFO  UserLogger [(null)] - Step 'IfElse5' : Evaluation style : Using condition
+2024-12-19 18:27:59,677 [5] INFO  UserLogger [(null)] - Step 'No' : Step 'No' started
+2024-12-19 18:27:59,677 [5] DEBUG UserLogger [(null)] - Step 'No' : Parent Step: 'IfElse5'
+2024-12-19 18:27:59,677 [5] INFO  UserLogger [(null)] - Step 'CreateFlightOrder' : Step 'CreateFlightOrder' started
+2024-12-19 18:27:59,677 [5] DEBUG UserLogger [(null)] - Step 'CreateFlightOrder' : Parent Step: 'IfElseBranch7'
+2024-12-19 18:27:59,693 [5] INFO  UserLogger [(null)] - 
+Request:
+
+<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/" xmlns:p1="http://www.w3.org/2001/XMLSchema-instance">
+  <Body>
+    <CreateFlightOrder xmlns="HP.SOAQ.SampleApp">
+      <FlightOrder>
+        <Class>First</Class>
+        <CustomerName p1:nil="true">MD S IMRAN</CustomerName>
+        <DepartureDate>2024-12-20T00:00:00</DepartureDate>
+        <FlightNumber>20279</FlightNumber>
+        <NumberOfTickets>3</NumberOfTickets>
+      </FlightOrder>
+    </CreateFlightOrder>
+  </Body>
+</Envelope>
+
+2024-12-19 18:27:59,693 [5] INFO  UserLogger [(null)] - Encoding channel is processing the message
+2024-12-19 18:27:59,693 [5] INFO  UserLogger [(null)] - Sending the following message:
+2024-12-19 18:27:59,693 [5] INFO  UserLogger [(null)] - HTTP channel is processing the message
+2024-12-19 18:27:59,709 [5] INFO  UserLogger [(null)] - URL: http://localhost:24240/HPFlights_SOAP
+2024-12-19 18:27:59,709 [5] INFO  UserLogger [(null)] - Sending the request to the server
+2024-12-19 18:27:59,709 [5] INFO  UserLogger [(null)] - 
+
+Request after processing:
+
+<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/" xmlns:p1="http://www.w3.org/2001/XMLSchema-instance">
+  <Body>
+    <CreateFlightOrder xmlns="HP.SOAQ.SampleApp">
+      <FlightOrder>
+        <Class>First</Class>
+        <CustomerName p1:nil="true">MD S IMRAN</CustomerName>
+        <DepartureDate>2024-12-20T00:00:00</DepartureDate>
+        <FlightNumber>20279</FlightNumber>
+        <NumberOfTickets>3</NumberOfTickets>
+      </FlightOrder>
+    </CreateFlightOrder>
+  </Body>
+</Envelope>
+
+
+2024-12-19 18:27:59,740 [5] INFO  UserLogger [(null)] - Returning the response to the previous channel
+2024-12-19 18:27:59,740 [5] INFO  UserLogger [(null)] - HTTP channel - done
+2024-12-19 18:27:59,740 [5] INFO  UserLogger [(null)] - Received the following message:
+2024-12-19 18:27:59,740 [5] INFO  UserLogger [(null)] - Encoding channel - done
+2024-12-19 18:27:59,756 [5] INFO  UserLogger [(null)] - 
+Response:
+
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Body>
+    <s:Fault>
+      <faultcode>s:Client</faultcode>
+      <faultstring xml:lang="en-US">ERROR: A flight date must be specified. It should be at least 24 hours from now.</faultstring>
+      <detail>
+        <MyFaultException xmlns="HP.SOAQ.SampleApp" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+          <Reason>ERROR: A flight date must be specified. It should be at least 24 hours from now.</Reason>
+        </MyFaultException>
+      </detail>
+    </s:Fault>
+  </s:Body>
+</s:Envelope>
+
+2024-12-19 18:27:59,756 [5] INFO  UserLogger [(null)] - Checkpoint 1: "s:Client" = "s:Client" passed
+2024-12-19 18:27:59,756 [5] INFO  UserLogger [(null)] - Checkpoint 2: "ERROR: A flight date must be specified. It should be at least 24 hours from now." = "ERROR: A flight date must be specified. It should be at least 24 hours from now." passed
+2024-12-19 18:27:59,771 [5] INFO  UserLogger [(null)] - Structural Validation: True
+2024-12-19 18:27:59,771 [5] INFO  UserLogger [(null)] - Step 'CreateFlightOrder' ended successfully
+2024-12-19 18:27:59,771 [5] INFO  UserLogger [(null)] - Step 'No' ended successfully
+2024-12-19 18:27:59,787 [5] INFO  UserLogger [(null)] - Step 'Condition5' ended successfully
+2024-12-19 18:27:59,787 [5] INFO  UserLogger [(null)] - Step 'Iteration 3' ended successfully
+2024-12-19 18:27:59,787 [5] INFO  UserLogger [(null)] - Step 'Iteration 4' : Step 'Iteration 4' started
+2024-12-19 18:27:59,802 [5] DEBUG UserLogger [(null)] - Step 'Iteration 4' : Parent Step: 'Loop2'
+2024-12-19 18:27:59,802 [5] INFO  UserLogger [(null)] - Step 'Condition5' : Step 'Condition5' started
+2024-12-19 18:27:59,802 [5] DEBUG UserLogger [(null)] - Step 'Condition5' : Parent Step: 'Sequence13'
+2024-12-19 18:27:59,802 [5] INFO  UserLogger [(null)] - Step 'IfElse5' : Evaluation style : Using condition
+2024-12-19 18:27:59,818 [5] INFO  UserLogger [(null)] - Step 'No' : Step 'No' started
+2024-12-19 18:27:59,818 [5] DEBUG UserLogger [(null)] - Step 'No' : Parent Step: 'IfElse5'
+2024-12-19 18:27:59,818 [5] INFO  UserLogger [(null)] - Step 'CreateFlightOrder' : Step 'CreateFlightOrder' started
+2024-12-19 18:27:59,818 [5] DEBUG UserLogger [(null)] - Step 'CreateFlightOrder' : Parent Step: 'IfElseBranch7'
+2024-12-19 18:27:59,834 [5] INFO  UserLogger [(null)] - 
+Request:
+
+<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/" xmlns:p1="http://www.w3.org/2001/XMLSchema-instance">
+  <Body>
+    <CreateFlightOrder xmlns="HP.SOAQ.SampleApp">
+      <FlightOrder>
+        <Class>First</Class>
+        <CustomerName p1:nil="true">MD S IMRAN</CustomerName>
+        <DepartureDate>2024-12-18T00:00:00</DepartureDate>
+        <FlightNumber>20279</FlightNumber>
+        <NumberOfTickets>3</NumberOfTickets>
+      </FlightOrder>
+    </CreateFlightOrder>
+  </Body>
+</Envelope>
+
+2024-12-19 18:27:59,834 [5] INFO  UserLogger [(null)] - Encoding channel is processing the message
+2024-12-19 18:27:59,849 [5] INFO  UserLogger [(null)] - Sending the following message:
+2024-12-19 18:27:59,865 [5] INFO  UserLogger [(null)] - HTTP channel is processing the message
+2024-12-19 18:27:59,865 [5] INFO  UserLogger [(null)] - URL: http://localhost:24240/HPFlights_SOAP
+2024-12-19 18:27:59,865 [5] INFO  UserLogger [(null)] - Sending the request to the server
+2024-12-19 18:27:59,881 [5] INFO  UserLogger [(null)] - 
+
+Request after processing:
+
+<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/" xmlns:p1="http://www.w3.org/2001/XMLSchema-instance">
+  <Body>
+    <CreateFlightOrder xmlns="HP.SOAQ.SampleApp">
+      <FlightOrder>
+        <Class>First</Class>
+        <CustomerName p1:nil="true">MD S IMRAN</CustomerName>
+        <DepartureDate>2024-12-18T00:00:00</DepartureDate>
+        <FlightNumber>20279</FlightNumber>
+        <NumberOfTickets>3</NumberOfTickets>
+      </FlightOrder>
+    </CreateFlightOrder>
+  </Body>
+</Envelope>
+
+
+2024-12-19 18:27:59,896 [5] INFO  UserLogger [(null)] - Returning the response to the previous channel
+2024-12-19 18:27:59,896 [5] INFO  UserLogger [(null)] - HTTP channel - done
+2024-12-19 18:27:59,896 [5] INFO  UserLogger [(null)] - Received the following message:
+2024-12-19 18:27:59,896 [5] INFO  UserLogger [(null)] - Encoding channel - done
+2024-12-19 18:27:59,912 [5] INFO  UserLogger [(null)] - 
+Response:
+
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Body>
+    <s:Fault>
+      <faultcode>s:Client</faultcode>
+      <faultstring xml:lang="en-US">ERROR: A flight date must be specified. It should be at least 24 hours from now.</faultstring>
+      <detail>
+        <MyFaultException xmlns="HP.SOAQ.SampleApp" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+          <Reason>ERROR: A flight date must be specified. It should be at least 24 hours from now.</Reason>
+        </MyFaultException>
+      </detail>
+    </s:Fault>
+  </s:Body>
+</s:Envelope>
+
+2024-12-19 18:27:59,912 [5] INFO  UserLogger [(null)] - Checkpoint 1: "s:Client" = "s:Client" passed
+2024-12-19 18:27:59,927 [5] INFO  UserLogger [(null)] - Checkpoint 2: "ERROR: A flight date must be specified. It should be at least 24 hours from now." = "ERROR: A flight date must be specified. It should be at least 24 hours from now." passed
+2024-12-19 18:27:59,927 [5] INFO  UserLogger [(null)] - Structural Validation: True
+2024-12-19 18:27:59,943 [5] INFO  UserLogger [(null)] - Step 'CreateFlightOrder' ended successfully
+2024-12-19 18:27:59,943 [5] INFO  UserLogger [(null)] - Step 'No' ended successfully
+2024-12-19 18:27:59,943 [5] INFO  UserLogger [(null)] - Step 'Condition5' ended successfully
+2024-12-19 18:27:59,959 [5] INFO  UserLogger [(null)] - Step 'Iteration 4' ended successfully
+2024-12-19 18:27:59,959 [5] INFO  UserLogger [(null)] - Step 'Test Flow' ended successfully
+2024-12-19 18:28:00,068 [5] INFO  UserLogger [(null)] - Step 'End' : Step 'End' started
+2024-12-19 18:28:00,068 [5] DEBUG UserLogger [(null)] - Step 'End' : Parent Step: 'test'
+2024-12-19 18:28:00,099 [5] INFO  UserLogger [(null)] - Step 'End' ended successfully
